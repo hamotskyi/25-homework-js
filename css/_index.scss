@@ -1,5 +1,5 @@
 .bg {
-    width: 1000px;
+    width: 720px;
     position: absolute;
     left: 50%;
     top: 10%;
@@ -8,7 +8,7 @@
     .java {
         text-align: center;
         font-size: 42pt;
-        color: yellow;
+        color: #dbdba9;
     }
     
     ol {
@@ -21,14 +21,6 @@
             a {  
                 color: #569cd6;
                 text-decoration: none;
-
-                &:visited {
-                    color: #569cd685;
-
-                    span {
-                        color: #7e7e7e8a;
-                    }
-                }
                 
                 span {
                     color: #7e7e7e;

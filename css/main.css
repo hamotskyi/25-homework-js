@@ -8,7 +8,7 @@ body {
 }
 
 .bg {
-  width: 1000px;
+  width: 720px;
   position: absolute;
   left: 50%;
   top: 10%;
@@ -19,7 +19,7 @@ body {
 .bg .java {
   text-align: center;
   font-size: 42pt;
-  color: yellow;
+  color: #dbdba9;
 }
 
 .bg ol {
@@ -36,15 +36,55 @@ body {
   text-decoration: none;
 }
 
-.bg ol li a:visited {
-  color: #569cd685;
-}
-
-.bg ol li a:visited span {
-  color: #7e7e7e8a;
-}
-
 .bg ol li a span {
   color: #7e7e7e;
+}
+
+ol li {
+  font-size: inherit;
+}
+
+ol li p {
+  color: #569cd6;
+  margin: 0;
+}
+
+ol li #userAge {
+  background-color: #1e1e1e;
+  border: none;
+  color: #cd9077;
+  font-size: inherit;
+}
+
+ol li #userAge:focus {
+  outline: none;
+}
+
+ol li #answer {
+  color: #9cdcfe;
+  font-size: inherit;
+}
+
+ol li button {
+  background-color: #1e1e1e;
+  border: none;
+  font-size: inherit;
+  color: #d7ba7d;
+  cursor: pointer;
+}
+
+ol li button:focus {
+  outline: none;
+}
+
+ol li #userNumber {
+  background-color: #1e1e1e;
+  border: none;
+  color: #cd9077;
+  font-size: inherit;
+}
+
+ol li #userNumber:focus {
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */

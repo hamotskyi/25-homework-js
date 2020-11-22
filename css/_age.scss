@@ -1,0 +1,38 @@
+ol {
+    li {
+        font-size: inherit;
+
+        p {
+            color: #569cd6;
+            margin: 0;
+        }
+
+        #userAge {
+            background-color: #1e1e1e;
+            border: none;
+            color: #cd9077;
+            font-size: inherit;
+
+            &:focus {
+                outline: none;
+            }
+        }
+        
+        #answer {
+            color: #9cdcfe;
+            font-size: inherit;
+        }
+
+        button {
+            background-color: #1e1e1e;
+            border: none;
+            font-size: inherit;
+            color: #d7ba7d;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

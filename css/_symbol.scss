@@ -1,0 +1,14 @@
+ol {
+    li {
+        #userNumber {
+            background-color: #1e1e1e;
+            border: none;
+            color: #cd9077;
+            font-size: inherit;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

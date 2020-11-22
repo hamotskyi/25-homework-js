@@ -1,4 +1,50 @@
 * {
   font-family: Menlo, Monaco, 'Courier New', monospace;
 }
+
+body {
+  background-color: #1e1e1e;
+  margin: 0;
+}
+
+.bg {
+  width: 1000px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bg .java {
+  text-align: center;
+  font-size: 42pt;
+  color: yellow;
+}
+
+.bg ol {
+  color: #858585;
+}
+
+.bg ol li {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.bg ol li a {
+  color: #569cd6;
+  text-decoration: none;
+}
+
+.bg ol li a:visited {
+  color: #569cd685;
+}
+
+.bg ol li a:visited span {
+  color: #7e7e7e8a;
+}
+
+.bg ol li a span {
+  color: #7e7e7e;
+}
 /*# sourceMappingURL=main.css.map */

@@ -7,7 +7,7 @@ function tellMeAge() {
     } else if (age >= 5 && age <= 10) {
         document.getElementById('answer').innerHTML = 'Господи, дитино, чого ти сидиш за тим компутером? Шо воно тобі дасть? Йди луче книжку якусь почитай... Я от в свої ' + age + ' років вже "Отче наш!" на памнять знав і з десяток книжок прочитав!'
     } else if (age >= 11 && age <= 17) {
-        document.getElementById('answer').innerHTML = 'Уроки вивчив? Бо щас провірю! Якшо знов нічого не зробив, бо весь день сидів і в монітора очі вилупив - то я того компутера продам, клянуся!'
+        document.getElementById('answer').innerHTML = 'Уроки вивчив? Бо завтра в школу!'
     } else if (age >= 18 && age <= 25) {
         document.getElementById('answer').innerHTML = 'Тобі точно ' + age + '? Ану покажи паспорт?'
     } else if (age >= 26 && age <= 39) {

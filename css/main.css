@@ -96,4 +96,15 @@ ol li #userNumber {
 ol li #userNumber:focus {
   outline: none;
 }
+
+ol li #userYear {
+  background-color: #1e1e1e;
+  border: none;
+  color: #cd9077;
+  font-size: inherit;
+}
+
+ol li #userYear:focus {
+  outline: none;
+}
 /*# sourceMappingURL=main.css.map */

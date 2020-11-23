@@ -20,6 +20,6 @@ function tellMeYear() {
             document.getElementById('answer').innerHTML = 'Давай ото як Ісус родився і дальше. Всьо шо раньше - не підходе';
         }
     } else {
-        document.getElementById('answer').innerHTML = 'Цифрами пиши';
-    }
-}
+        document.getElementById('answer').innerHTML = 'Напиши цифри';
+    };
+};

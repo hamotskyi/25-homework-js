@@ -67,10 +67,19 @@ ol li #answer {
 
 ol li button {
   background-color: #1e1e1e;
-  border: none;
+  border: 1px solid #d7ba7d;
+  border-radius: 4px;
+  padding-bottom: 3px;
   font-size: inherit;
   color: #d7ba7d;
   cursor: pointer;
+  -webkit-transition: ease-in-out .1s;
+  transition: ease-in-out .1s;
+}
+
+ol li button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 ol li button:focus {

@@ -25,10 +25,17 @@ ol {
 
         button {
             background-color: #1e1e1e;
-            border: none;
+            border: 1px solid #d7ba7d;
+            border-radius: 4px;
+            padding-bottom: 3px;
             font-size: inherit;
             color: #d7ba7d;
             cursor: pointer;
+            transition: ease-in-out .1s;
+
+            &:active {
+                transform: scale(.9);
+            }
 
             &:focus {
                 outline: none;

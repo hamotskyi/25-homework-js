@@ -107,4 +107,16 @@ ol li #userYear {
 ol li #userYear:focus {
   outline: none;
 }
+
+ol li #userText {
+  background-color: #1e1e1e;
+  border: none;
+  color: #cd9077;
+  font-size: inherit;
+  width: 450px;
+}
+
+ol li #userText:focus {
+  outline: none;
+}
 /*# sourceMappingURL=main.css.map */

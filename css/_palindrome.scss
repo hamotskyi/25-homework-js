@@ -1,0 +1,15 @@
+ol {
+    li {
+        #userText {
+            background-color: #1e1e1e;
+            border: none;
+            color: #cd9077;
+            font-size: inherit;
+            width: 450px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

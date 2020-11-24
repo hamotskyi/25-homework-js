@@ -119,4 +119,46 @@ ol li #userText {
 ol li #userText:focus {
   outline: none;
 }
+
+ol li #userMoney {
+  background-color: #1e1e1e;
+  border: none;
+  color: #cd9077;
+  font-size: inherit;
+}
+
+ol li #userMoney:focus {
+  outline: none;
+}
+
+ol li label {
+  border: 1px solid #7e7e7e;
+  border-radius: 4px;
+  padding: 2px;
+  text-align: center;
+  font-size: inherit;
+  color: #7e7e7e;
+  cursor: pointer;
+}
+
+ol li #exchangeUsd,
+ol li #exchangeEur,
+ol li #exchangePln {
+  display: none;
+}
+
+ol li #exchangeUsd:checked + label {
+  border: 1px solid #d7ba7d;
+  color: #d7ba7d;
+}
+
+ol li #exchangeEur:checked + label {
+  border: 1px solid #d7ba7d;
+  color: #d7ba7d;
+}
+
+ol li #exchangePln:checked + label {
+  border: 1px solid #d7ba7d;
+  color: #d7ba7d;
+}
 /*# sourceMappingURL=main.css.map */

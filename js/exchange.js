@@ -15,7 +15,7 @@ function toExchange() {
 function toChooseCurrency() {
     var radioArr = document.getElementsByName('exchange');
     var userData = document.getElementById('userMoney').value;
-    var userMoney = parseInt(userData);
+    var userMoney = Number(userData).toFixed(2);    //parseInt(userData);
 
     for (var i = 0; i < radioArr.length; i++) {
         if (radioArr[i].type == "radio" && radioArr[i].checked) {
@@ -32,7 +32,7 @@ function toChooseCurrency() {
 
             if (userMoney <= radioArr[i].value) {
                 answer.innerHTML = 'Це получається ' + (userMoney / radioArr[i].value).toFixed(2) + symbol + '. Але мєлочью я не торгую!';
-            } else if (userMoney % radioArr[i].value = 0) {                             //TOFINISH
+/*TODO*/    } else if ((userMoney % radioArr[i].value) != 0) {
                 answer.innerHTML = 'Це получається ' + floorNumber + symbol;
             } else {
                 answer.innerHTML = 'Це получається ' + floorNumber + symbol + ' і ' + moneyChange + 'грн здачі.';

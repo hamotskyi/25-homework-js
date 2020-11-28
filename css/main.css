@@ -8,7 +8,8 @@ body {
 }
 
 .bg {
-  width: 720px;
+  width: 50%;
+  min-width: 400px;
   position: absolute;
   left: 50%;
   top: 10%;
@@ -160,5 +161,18 @@ ol li #exchangeEur:checked + label {
 ol li #exchangePln:checked + label {
   border: 1px solid #d7ba7d;
   color: #d7ba7d;
+}
+
+ol li #squarePerimeter,
+ol li #circleLength {
+  background-color: #1e1e1e;
+  border: none;
+  color: #cd9077;
+  font-size: inherit;
+}
+
+ol li #squarePerimeter:focus,
+ol li #circleLength:focus {
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */

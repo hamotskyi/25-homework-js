@@ -1,16 +1,39 @@
-ol {
-    li {
-        #squarePerimeter,
-        #circleLength {
-            background-color: #1e1e1e;
-            border: none;
-            color: #cd9077;
-            font-size: inherit;
+.bg {
+    ol {
+        li {
+            #squarePerimeter,
+            #circleLength {
+                width: 100px;
+                background-color: #1e1e1e;
+                border: none;
+                color: #cd9077;
+                font-size: inherit;
 
-            &:focus {
-                outline: none;
+                &:focus {
+                    outline: none;
+                }
             }
         }
     }
+
+    .circle-wrapper {
+        position: absolute;
+        min-height: 400px;
+        left: 50%;
+        transform: translate(-50%);
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    
+    }
+
+    .square-wrapper {
+        position: absolute;
+        min-height: 400px;
+        left: 50%;
+        transform: translate(-50%);
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
 }
-//создати дів. в ньому два діва. кожному айді дати і вставляти фігури в них

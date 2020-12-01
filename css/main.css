@@ -163,16 +163,45 @@ ol li #exchangePln:checked + label {
   color: #d7ba7d;
 }
 
-ol li #squarePerimeter,
-ol li #circleLength {
+.bg ol li #squarePerimeter,
+.bg ol li #circleLength {
+  width: 100px;
   background-color: #1e1e1e;
   border: none;
   color: #cd9077;
   font-size: inherit;
 }
 
-ol li #squarePerimeter:focus,
-ol li #circleLength:focus {
+.bg ol li #squarePerimeter:focus,
+.bg ol li #circleLength:focus {
   outline: none;
+}
+
+.bg .circle-wrapper {
+  position: absolute;
+  min-height: 400px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg .square-wrapper {
+  position: absolute;
+  min-height: 400px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+li {
+    form {
+        input {
+            display: none;
+        }
+
+        .answer-radio:checked + label  {
+            border: 1px solid #d7ba7d;
+            color: #d7ba7d;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 5px;
+        }
+    }
+}

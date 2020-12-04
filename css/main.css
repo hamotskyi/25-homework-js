@@ -204,4 +204,18 @@ ol li #exchangePln:checked + label {
       -ms-flex-align: center;
           align-items: center;
 }
+
+li form input {
+  display: none;
+}
+
+li form .answer-radio:checked + label {
+  border: 1px solid #d7ba7d;
+  color: #d7ba7d;
+}
+
+li form label {
+  display: inline-block;
+  margin-top: 5px;
+}
 /*# sourceMappingURL=main.css.map */

@@ -18,7 +18,9 @@ function toChooseCurrency() {
     var userMoney = Number(userData).toFixed(2);    //parseInt(userData);
 
     for (var i = 0; i < radioArr.length; i++) {
+
         if (radioArr[i].type == "radio" && radioArr[i].checked) {
+
             var floorNumber = Math.floor(userMoney / radioArr[i].value);
             var moneyChange = (userMoney - (floorNumber * radioArr[i].value)).toFixed(0);
 
@@ -29,16 +31,15 @@ function toChooseCurrency() {
             } else {
                 var symbol = 'zł'
             };
-
+            
             if (userMoney <= radioArr[i].value) {
-                answer.innerHTML = 'Це получається ' + (userMoney / radioArr[i].value).toFixed(2) + symbol + '. Але мєлочью я не торгую!';
+                answer.innerHTML = 'Це получається ' + (userMoney / radioArr[i].value).toFixed(2) + symbol + '. Але мєлочью я не торгую!'
 /*TODO*/    } else if ((userMoney % radioArr[i].value) != 0) {
                 answer.innerHTML = 'Це получається ' + floorNumber + symbol;
             } else {
                 answer.innerHTML = 'Це получається ' + floorNumber + symbol + ' і ' + moneyChange + 'грн здачі.';
             }
         
-            break;
         } 
     }
 

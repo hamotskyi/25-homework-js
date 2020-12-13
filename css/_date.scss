@@ -1,0 +1,22 @@
+ol {
+    li {
+        input[type=date] {
+            width: 150px;
+            color: rgb(175, 175, 175);
+            background-color: #1e1e1e;
+            border: none;
+            font-size: inherit;
+            
+            &::-webkit-calendar-picker-indicator { 
+                background: url(../img/calendar.svg);
+                background-size: 90%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

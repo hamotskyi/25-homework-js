@@ -218,4 +218,23 @@ li form label {
   display: inline-block;
   margin-top: 5px;
 }
+
+ol li input[type=date] {
+  width: 150px;
+  color: #afafaf;
+  background-color: #1e1e1e;
+  border: none;
+  font-size: inherit;
+}
+
+ol li input[type=date]::-webkit-calendar-picker-indicator {
+  background: url(../img/calendar.svg);
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+ol li input[type=date]:focus {
+  outline: none;
+}
 /*# sourceMappingURL=main.css.map */

@@ -6,24 +6,28 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../fonts/Monaco.ttf">
     <link rel="stylesheet" href="../fonts/Menlo.ttf">
-    <title>&lt;валютчик &#47;&gt;</title>
+    <title>&lt;дата &#47;&gt;</title>
 </head>
 <body>
     <div class="bg">
-        <ol id="ol">
+        <ol>
             <li>
                 <p>
-                    Скільки маєш гривень?
+                    Задай якусь дату і побачим, що буде далі...
                 </p>
             </li>
             <li>
-                <input autofocus id="userMoney" type="text">
-                <button onclick='toExchange(this); this.onclick=null;'>ок</button>
-            </li>            
+                <input id="userDate" type="date">
+                <button onclick="showNextDate()">ок</button>
+            </li>
+            <li>
+                <p id="answer">
+
+                </p>
+            </li>
         </ol>
     </div>
 
-    <script src="../js/exchange.js"></script>
+    <script src="../js/date.js"></script>
 </body>
 </html>
-

@@ -1,11 +1,50 @@
 let shoppingList = [];
 let ol = document.getElementById('ol');
-let quantity = 1
-
-console.log(shoppingList);
 
 
+class Product {
+    constructor (title) {
+        this.title = title;
+        this.quantity = 1;
+    }
+}
 
+function addNewProduct() {
+
+    let inputArticle = document.getElementById('inputArticle').value;
+    let newProduct = new Product(inputArticle);
+    
+
+    if (shoppingList.length < 1) {
+
+        shoppingList.push(newProduct);
+        console.log(shoppingList)
+
+        
+    } else {
+
+        for (i=0; i < shoppingList.length; i++) {
+
+            if (shoppingList.length >= 1 && inputArticle == shoppingList[i].title) {
+
+                shoppingList.push(newProduct);
+
+            } else {
+
+                shoppingList[i].quantity += 1;
+
+            }
+            
+        }
+
+        console.log(shoppingList);
+
+    }
+    
+}
+
+
+/*
 function addNewElement() {
 
     let inputArticle = document.getElementById('inputArticle').value;
@@ -19,6 +58,8 @@ function addNewElement() {
         
     } else {
 
+        quantity = 1;
+
         shoppingList.push(inputArticle)
 
         let li = document.createElement('li');
@@ -29,4 +70,4 @@ function addNewElement() {
     }
 
 }
-
+*/

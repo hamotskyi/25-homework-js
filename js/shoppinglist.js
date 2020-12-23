@@ -23,21 +23,15 @@ function addNewProduct() {
         
     } else {
 
-        let index = -1;
-        for (i=0; i < shoppingList.length; i++) {
-
-            if (inputArticle == shoppingList[i].title) {
-
-                index = i;
-                shoppingList[i].quantity += 1;
-                break;
-
-            }
-            
-        }
+        let index = shoppingList.findIndex((product) => {
+          return (product.title == inputArticle);
+        });
+        console.log(index);
 
         if (index == -1) {
           shoppingList.push(newProduct);
+        } else {
+          shoppingList[index].quantity++;
         }
 
         console.log(shoppingList);

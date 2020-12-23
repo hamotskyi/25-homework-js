@@ -15,7 +15,7 @@ function addNewProduct() {
     let newProduct = new Product(inputArticle);
     
 
-    if (shoppingList.length < 1) {
+    if (!shoppingList.length) {
 
         shoppingList.push(newProduct);
         console.log(shoppingList)
@@ -23,18 +23,21 @@ function addNewProduct() {
         
     } else {
 
+        let index = -1;
         for (i=0; i < shoppingList.length; i++) {
 
-            if (shoppingList.length >= 1 && inputArticle == shoppingList[i].title) {
+            if (inputArticle == shoppingList[i].title) {
 
-                shoppingList.push(newProduct);
-
-            } else {
-
+                index = i;
                 shoppingList[i].quantity += 1;
+                break;
 
             }
             
+        }
+
+        if (index == -1) {
+          shoppingList.push(newProduct);
         }
 
         console.log(shoppingList);

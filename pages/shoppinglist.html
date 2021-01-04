@@ -9,15 +9,25 @@
     <title>&lt;списокПокупок &#47;&gt;</title>
 </head>
 <body>
-    <div class="bg" id="bg">
-        <p style="color: white;">
+    <div class="shoppinglist-bg" id="shoppinglist-bg">
+        <p>
             Що потрібно ще купити?
         </p>
-        <input type="text" name="" id="inputArticle"> <button onclick="addNewProduct()">add</button>
 
-        <ol id="ol">
+        <div class="inputWrapper">
+            <input type="text" name="" id="inputArticle"> 
+        </div>
 
-        </ol>
+        <button onclick="addNewProduct()">
+            add
+        </button>
+
+        <ul id="ul">
+
+        </ul>
+    </div>
+    <div id="shoppinglist-footer">
+
     </div>
     <script src="../js/shoppinglist.js"></script>
 </body>

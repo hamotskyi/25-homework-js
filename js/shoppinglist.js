@@ -1,6 +1,5 @@
 let shoppingList = [];
-let ol = document.getElementById('ol');
-
+let ul = document.getElementById('ul');
 
 class Product {
     constructor (title) {
@@ -18,53 +17,74 @@ function addNewProduct() {
     if (!shoppingList.length) {
 
         shoppingList.push(newProduct);
-        console.log(shoppingList)
+        let li = document.createElement("li");
+        let label = document.createElement("label");
+        let pName = document.createElement('p');
+        let pQuantity = document.createElement('p');
+        let inputCheck = document.createElement("input");
+        let attFor = document.createAttribute("for");
+        let attIdForP = document.createAttribute("id");
+        let attType = document.createAttribute("type");
+        let name = shoppingList[0].title
+        let quant = shoppingList[0].quantity
+        let textQuantity = document.createTextNode(`x ${quant}`)
+        let textName = document.createTextNode(`${name}`)
+        attType.value = "checkbox";
+        pQuantity.setAttributeNode(attIdForP);
+        attIdForP.value = `qt${shoppingList.length - 1}`;
+        ul.appendChild(li);
+        li.appendChild(label);
+        label.appendChild(pName);
+        label.appendChild(pQuantity);
+        label.appendChild(inputCheck);
+        pName.appendChild(textName);
+        pQuantity.appendChild(textQuantity);
+        inputCheck.setAttributeNode(attType);
 
-        
     } else {
 
         let index = shoppingList.findIndex((product) => {
           return (product.title == inputArticle);
         });
-        console.log(index);
 
         if (index == -1) {
-          shoppingList.push(newProduct);
+
+            shoppingList.push(newProduct);
+            let li = document.createElement("li");
+            let label = document.createElement("label");
+            let pName = document.createElement('p');
+            let pQuantity = document.createElement('p');
+            let inputCheck = document.createElement("input");
+            let attFor = document.createAttribute("for");
+            let attIdForP = document.createAttribute("id");
+            let attType = document.createAttribute("type");
+            let name = shoppingList[shoppingList.length - 1].title
+            let quant = shoppingList[shoppingList.length - 1].quantity
+            let textQuantity = document.createTextNode(`x ${quant}`)
+            let textName = document.createTextNode(`${name}`)
+            attType.value = "checkbox";
+            pQuantity.setAttributeNode(attIdForP);
+            attIdForP.value = `qt${shoppingList.length - 1}`;
+            ul.appendChild(li);
+            li.appendChild(label);
+            label.appendChild(pName);
+            label.appendChild(pQuantity);
+            label.appendChild(inputCheck);
+            pName.appendChild(textName);
+            pQuantity.appendChild(textQuantity);
+            inputCheck.setAttributeNode(attType);
+
         } else {
-          shoppingList[index].quantity++;
+
+            shoppingList[index].quantity++;
+            let pQ = document.getElementById(`qt${index}`);
+            let quant = shoppingList[index].quantity;
+            let textQuantity = document.createTextNode(`x ${quant}`);
+            pQ.removeChild(pQ.firstChild);
+            pQ.appendChild(textQuantity);
+
         }
 
-        console.log(shoppingList);
-
     }
     
 }
-
-
-/*
-function addNewElement() {
-
-    let inputArticle = document.getElementById('inputArticle').value;
-    let i = shoppingList.length - 1;
-    let idNum = shoppingList.length
-
-    
-    if (shoppingList.includes(inputArticle)) {
-
-        quantity += 1;
-        
-    } else {
-
-        quantity = 1;
-
-        shoppingList.push(inputArticle)
-
-        let li = document.createElement('li');
-        li.innerHTML = `<label for="check${idNum}">${shoppingList[i]} х ${quantity} <input type="checkbox" id="check${idNum}"></label>`;
-    
-        ol.appendChild(li); 
-
-    }
-
-}
-*/

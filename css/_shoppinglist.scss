@@ -1,0 +1,64 @@
+#shoppinglist-bg {
+    width: 70%;
+    min-width: 400px;
+    min-height: 80%;
+    margin-bottom: 10%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+
+    background-color: #cfd9ce;
+    p {
+        color: #569cd6;
+    }
+    .inputWrapper {
+        display: inline-block;
+        background: linear-gradient(173deg, rgba(215,186,125,1) 0%, rgba(9,9,121,0) 35%);        
+        
+        #inputArticle {
+            width: 350px;
+            background-color: #1e1e1e;
+            border: none;
+            color:#cd9077;
+            font-size: inherit;
+            margin: 1px;
+            padding-top: 5px;
+            padding-left: 5px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    
+
+    button {
+        background-color: #1e1e1e;
+        border: 1px solid #d7ba7d;
+        border-radius: 4px;
+        padding-bottom: 3px;
+        font-size: inherit;
+        color: #d7ba7d;
+        cursor: pointer;
+        transition: ease-in-out .1s;
+
+        &:active {
+            transform: scale(.9);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+#shoppinglist-footer {
+    width: 70%;
+    min-width: 400px;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}

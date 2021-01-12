@@ -24,13 +24,15 @@ function addNewProduct() {
         let inputCheck = document.createElement("input");
         let attFor = document.createAttribute("for");
         let attIdForP = document.createAttribute("id");
+        let attIdForInp = document.createAttribute("id");
         let attType = document.createAttribute("type");
         let name = shoppingList[0].title
         let quant = shoppingList[0].quantity
         let textQuantity = document.createTextNode(`x ${quant}`)
         let textName = document.createTextNode(`${name}`)
         attType.value = "checkbox";
-        pQuantity.setAttributeNode(attIdForP);
+        attIdForInp.value = `check${shoppingList.length - 1}`;
+        attFor.value = attIdForInp.value;
         attIdForP.value = `qt${shoppingList.length - 1}`;
         ul.appendChild(li);
         li.appendChild(label);
@@ -40,6 +42,10 @@ function addNewProduct() {
         pName.appendChild(textName);
         pQuantity.appendChild(textQuantity);
         inputCheck.setAttributeNode(attType);
+        inputCheck.setAttributeNode(attIdForInp);
+        label.setAttributeNode(attFor);
+        pQuantity.setAttributeNode(attIdForP);
+
 
     } else {
 
@@ -57,13 +63,15 @@ function addNewProduct() {
             let inputCheck = document.createElement("input");
             let attFor = document.createAttribute("for");
             let attIdForP = document.createAttribute("id");
+            let attIdForInp = document.createAttribute("id");
             let attType = document.createAttribute("type");
             let name = shoppingList[shoppingList.length - 1].title
             let quant = shoppingList[shoppingList.length - 1].quantity
             let textQuantity = document.createTextNode(`x ${quant}`)
             let textName = document.createTextNode(`${name}`)
             attType.value = "checkbox";
-            pQuantity.setAttributeNode(attIdForP);
+            attIdForInp.value = `check${shoppingList.length - 1}`;
+            attFor.value = attIdForInp.value;
             attIdForP.value = `qt${shoppingList.length - 1}`;
             ul.appendChild(li);
             li.appendChild(label);
@@ -73,6 +81,9 @@ function addNewProduct() {
             pName.appendChild(textName);
             pQuantity.appendChild(textQuantity);
             inputCheck.setAttributeNode(attType);
+            inputCheck.setAttributeNode(attIdForInp);
+            label.setAttributeNode(attFor);
+            pQuantity.setAttributeNode(attIdForP);
 
         } else {
 

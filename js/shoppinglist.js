@@ -1,5 +1,6 @@
 let shoppingList = [];
 let ul = document.getElementById('ul');
+let ulDone =  document.getElementById('ulDone');
 
 class Product {
     constructor (title) {
@@ -23,6 +24,7 @@ function addNewProduct() {
         let pQuantity = document.createElement('p');
         let inputCheck = document.createElement("input");
         let attFor = document.createAttribute("for");
+        let attOnchange = document.createAttribute("onchange");//
         let attIdForP = document.createAttribute("id");
         let attIdForInp = document.createAttribute("id");
         let attType = document.createAttribute("type");
@@ -34,6 +36,7 @@ function addNewProduct() {
         attIdForInp.value = `check${shoppingList.length - 1}`;
         attFor.value = attIdForInp.value;
         attIdForP.value = `qt${shoppingList.length - 1}`;
+        attOnchange.value = "productFilter(this)";//
         ul.appendChild(li);
         li.appendChild(label);
         label.appendChild(pName);
@@ -43,6 +46,7 @@ function addNewProduct() {
         pQuantity.appendChild(textQuantity);
         inputCheck.setAttributeNode(attType);
         inputCheck.setAttributeNode(attIdForInp);
+        inputCheck.setAttributeNode(attOnchange);//
         label.setAttributeNode(attFor);
         pQuantity.setAttributeNode(attIdForP);
 
@@ -62,6 +66,7 @@ function addNewProduct() {
             let pQuantity = document.createElement('p');
             let inputCheck = document.createElement("input");
             let attFor = document.createAttribute("for");
+            let attOnchange = document.createAttribute("onchange");
             let attIdForP = document.createAttribute("id");
             let attIdForInp = document.createAttribute("id");
             let attType = document.createAttribute("type");
@@ -73,6 +78,7 @@ function addNewProduct() {
             attIdForInp.value = `check${shoppingList.length - 1}`;
             attFor.value = attIdForInp.value;
             attIdForP.value = `qt${shoppingList.length - 1}`;
+            attOnchange.value = "productFilter(this)";
             ul.appendChild(li);
             li.appendChild(label);
             label.appendChild(pName);
@@ -82,6 +88,7 @@ function addNewProduct() {
             pQuantity.appendChild(textQuantity);
             inputCheck.setAttributeNode(attType);
             inputCheck.setAttributeNode(attIdForInp);
+            inputCheck.setAttributeNode(attOnchange);
             label.setAttributeNode(attFor);
             pQuantity.setAttributeNode(attIdForP);
 
@@ -98,4 +105,19 @@ function addNewProduct() {
 
     }
     
+}
+
+function productFilter(x) {
+ 
+    let labelParent = x.parentNode
+    let liParent = labelParent.parentNode
+    
+    if (x.checked == true) {
+        ul.removeChild(liParent)
+        ulDone.appendChild(liParent)
+    } else {
+        ulDone.removeChild(liParent)
+        ul.appendChild(liParent)
+    }
+
 }

@@ -15,7 +15,7 @@
     <div class="shoppinglist-bg" id="shoppinglist-bg">
         
         <p id="whatYouNeed">
-            Що потрібно ще купити?
+            Список покупок
         </p>
 
         <div id="inputButtonWrapper">
@@ -23,18 +23,20 @@
             <input type="text" name="" id="inputArticle">     
 
             <div id="addButton" onclick="addNewProduct()">
-            додати до списка
+            додати
             </div> 
 
         </div>   
 
-        <ul id="ul">
+        <div id="ulWrapper">
 
-        </ul>
+            <div>Купити:</div>
+            <div>Куплено:</div>
 
-        <ul id="ulDone">
+            <ul id="ul"></ul>
+            <ul id="ulDone"></ul>
 
-        </ul>
+        </div>
     </div>
     <script src="../js/shoppinglist.js"></script>
 </body>
